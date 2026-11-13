@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8944676614685188831
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 904798918927703084}
+  - component: {fileID: 6483811944258480742}
+  m_Layer: 0
+  m_Name: WorkerCreator
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &904798918927703084
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8944676614685188831}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6483811944258480742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8944676614685188831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a56c1983f3f51e84cbe208aca89c154b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorkerCreator
+  numberWorker: 20
+  prefabWorker: {fileID: 4032089812638975637, guid: 061056c89decfd64f9d1e69fbeee1773, type: 3}
+  names:
+  - Quentin
+  - Guillermo
+  - Tomas
+  - Milan
+  - "Fran\xE7ois"
+  - Hecate
+  - Piw
+  - Elise
+  - Tobias
+  - "L\xE9andre"
+  energieTranche: {x: 5, y: 18}
+  skins:
+  - {r: 0.990566, g: 0.8171286, b: 0.5093005, a: 1}
+  - {r: 0.7924528, g: 0.55860084, b: 0.15325737, a: 1}
+  - {r: 0.4811321, g: 0.3516492, b: 0.22014064, a: 1}
+  hairs:
+  - {fileID: 4991952401849496955, guid: cdef59d8d7e436e44ba6be63aac4fca3, type: 3}
+  - {fileID: -8520096505220840418, guid: 63a745c862a2de04ea9c3d8175e99791, type: 3}
+  hairColors:
+  - {r: 0.5, g: 0.36527535, b: 0.09198114, a: 1}
+  - {r: 0.8396226, g: 0.7793057, b: 0.44753468, a: 1}
+  - {r: 0.34901962, g: 0.7936671, b: 0.98039216, a: 1}
+  eyes:
+  - {fileID: 21300000, guid: 911c19546e92b6849b9317c2342576a4, type: 3}
+  - {fileID: 21300000, guid: 72372e0afe0fe234c87c3cb88bb88ed1, type: 3}
+  eyesColors:
+  - {r: 0.7307232, g: 0.9716981, b: 0.66460484, a: 1}
+  - {r: 0.6627451, g: 0.8311223, b: 0.972549, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  habits:
+  - {fileID: -9095944366704659625, guid: a47b889cffc84514590ce4b4736c9d9a, type: 3}
+  habitColors:
+  - {r: 0.2396867, g: 0.21293166, b: 0.8207547, a: 1}
+  - {r: 0.81960785, g: 0.21765555, b: 0.21176471, a: 1}
+  - {r: 0.4657711, g: 0.81960785, b: 0.21176471, a: 1}

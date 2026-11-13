@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class WorkerElement : MonoBehaviour
+public class WorkerBehaviour : MonoBehaviour
 {
     public Worker worker;
 
@@ -8,6 +8,8 @@ public class WorkerElement : MonoBehaviour
     public SpriteRenderer hair;
     public SpriteRenderer eye;
     public SpriteRenderer habit;
+
+    public Rigidbody2D rb;
 
     public void Instantiate(Worker newWorker)
     {

@@ -3,8 +3,9 @@ using UnityEngine;
 public class WorkerCreator : MonoBehaviour
 {
     [Header("Spawn")] 
+    public Transform spawnPoint;
     public int numberWorker;
-    public WorkerElement prefabWorker;
+    public WorkerBehaviour prefabWorker;
     
     [Header("DataBases")]
     public string[] names;
@@ -83,9 +84,9 @@ public class WorkerCreator : MonoBehaviour
         
         newWorker.habit = habit;
         newWorker.habitColor = habitColor;
-        
-        
-        WorkerElement workerElement = Instantiate(prefabWorker,null);
+
+
+        WorkerBehaviour workerElement = Instantiate(prefabWorker, spawnPoint.position, spawnPoint.rotation, transform.parent);
         workerElement.Instantiate(newWorker);
         
     }

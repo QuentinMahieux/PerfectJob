@@ -3,12 +3,14 @@ using UnityEngine;
 
 public class Grab : MonoBehaviour
 {
-    public bool isDraggind = false;
+    private bool isDraggind = false;
+    public bool returneStart;
+    private Vector3 oldPosition;
     public Vector2 offset;
 
     private void Update()
     {
-        if (isDraggind )
+        if (isDraggind)
         { 
             transform.position = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset;
         }
@@ -18,10 +20,12 @@ public class Grab : MonoBehaviour
     {
         offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
         isDraggind = true;
+        oldPosition = transform.position;
     }
 
     private void OnMouseUp()
     {
         isDraggind = false;
+        transform.position = oldPosition;
     }
 }
