@@ -20,8 +20,10 @@ public class FishingRodVivarium : MonoBehaviour
 
     private void OnEnable()
     {
+        isDropped = false;
         transform.position = defaultPosition;
-        newWorker = Instantiate(prefabWorker, hook.position, hook.rotation);
+        newWorker = Instantiate(prefabWorker, hook.position, hook.rotation, transform.parent);
+        
         newWorker.Instantiate(GameManager.instance.TakeCurrentWorker());
     }
 
@@ -36,7 +38,7 @@ public class FishingRodVivarium : MonoBehaviour
         }
         else
         {
-            Vector3 velocity = Vector3.down.normalized * speed;
+            Vector3 velocity = Vector3.up.normalized * speed;
         
             rb.linearVelocity = velocity;
         }
@@ -47,8 +49,6 @@ public class FishingRodVivarium : MonoBehaviour
         if(other.CompareTag("Ground"))
         {
             isDropped = true;
-            
-            
         }
     }
 }

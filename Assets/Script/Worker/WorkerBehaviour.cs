@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class WorkerBehaviour : MonoBehaviour
@@ -11,8 +12,13 @@ public class WorkerBehaviour : MonoBehaviour
 
     public Rigidbody2D rb;
 
+    private void OnEnable()
+    {
+    }
+
     public void Instantiate(Worker newWorker)
     {
+
         worker = newWorker;
 
         skin.color = newWorker.skin;
@@ -25,6 +31,8 @@ public class WorkerBehaviour : MonoBehaviour
         
         habit.sprite = newWorker.habit;
         habit.color = newWorker.habitColor;
+        
+
     }
 
 }

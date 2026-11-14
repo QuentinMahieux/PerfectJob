@@ -75,7 +75,7 @@ public class FishingRod : MonoBehaviour
 
     IEnumerator TimeEnd(Worker worker, GameObject workerObject)
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         Destroy(workerObject);
         GameManager.instance.ChargeWinCaptureWorker(worker);
     }

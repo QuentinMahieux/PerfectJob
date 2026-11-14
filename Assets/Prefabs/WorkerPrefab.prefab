@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 584263814488225295}
   - component: {fileID: 5760090359987134607}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 8470370207232601580}
   - component: {fileID: 4010300613561984437}
   - component: {fileID: 5555402779669736406}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ec62498400bd4649a91dad49e4b91e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Grab
-  isDraggind: 0
+  returneStart: 0
   offset: {x: 0, y: 0}
 --- !u!1 &5996102358333812089
 GameObject:
@@ -247,7 +247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1308229538266564016}
   - component: {fileID: 1234531884967813837}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: habit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -340,7 +340,7 @@ GameObject:
   - component: {fileID: 4032089812638975637}
   - component: {fileID: 407760419551892210}
   - component: {fileID: 4262798057585427494}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WorkerPrefab
   m_TagString: Worker
   m_Icon: {fileID: 0}
@@ -473,7 +473,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8594164073959181587}
   - component: {fileID: 3450314511082530389}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hear
   m_TagString: Untagged
   m_Icon: {fileID: 0}

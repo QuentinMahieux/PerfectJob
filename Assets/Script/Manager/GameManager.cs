@@ -35,7 +35,12 @@ public class GameManager : MonoBehaviour
     {
         EnableScene("Vivarium");
     }
-
+    
+    public void ChargePlanning()
+    {
+        EnableScene("Planning");
+    }
+    
     public Worker TakeCurrentWorker()
     {
         return currentWorker;

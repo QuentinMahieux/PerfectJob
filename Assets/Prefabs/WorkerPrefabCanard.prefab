@@ -16,9 +16,29 @@ PrefabInstance:
       propertyPath: m_Offset.x
       value: 0.082491696
       objectReference: {fileID: 0}
+    - target: {fileID: 4589634729288683720, guid: 061056c89decfd64f9d1e69fbeee1773, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775793942905665272, guid: 061056c89decfd64f9d1e69fbeee1773, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5996102358333812089, guid: 061056c89decfd64f9d1e69fbeee1773, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7593667063789450534, guid: 061056c89decfd64f9d1e69fbeee1773, type: 3}
       propertyPath: m_Name
       value: WorkerPrefabCanard
+      objectReference: {fileID: 0}
+    - target: {fileID: 7593667063789450534, guid: 061056c89decfd64f9d1e69fbeee1773, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8258355788776611941, guid: 061056c89decfd64f9d1e69fbeee1773, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9145538835130593763, guid: 061056c89decfd64f9d1e69fbeee1773, type: 3}
       propertyPath: m_LocalPosition.x

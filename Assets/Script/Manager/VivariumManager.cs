@@ -1,14 +1,32 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class VivariumManager : MonoBehaviour
 {
-    void Start()
+    public static VivariumManager instance;
+
+    public List<Transform> waypoints = new List<Transform>();
+    
+    private void Awake()
+    {
+        if (!instance) instance = this;
+        else Destroy(gameObject);
+        
+        foreach (Transform point in transform)
+        {
+            waypoints.Add(point);
+        }
+    }
+
+    private void Start()
     {
         
     }
 
-    void Update()
+    public Transform RandomWaypoint()
     {
-        
+        return waypoints[Random.Range(0, waypoints.Count)];
     }
 }
