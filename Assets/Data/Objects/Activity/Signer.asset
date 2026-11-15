@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f3c46d2aeac1147809c9b84550e9e3, type: 3}
+  m_Name: Signer
+  m_EditorClassIdentifier: Assembly-CSharp::ActivityData
+  <name>k__BackingField: Contrat
+  <descrition>k__BackingField: 
+  <sprite>k__BackingField: {fileID: -7546360046477417670, guid: fc77552bb423cf44695bd08762e688f9, type: 3}
+  <rewardType>k__BackingField: 0
+  <effectType>k__BackingField: 2
+  <reward>k__BackingField: 3
+  <energie>k__BackingField: 1

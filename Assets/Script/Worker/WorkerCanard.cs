@@ -9,8 +9,9 @@ public class WorkerCanard : WorkerBehaviour
     private bool isGrab = false;
     private Transform hook;
 
-    private void Update()
+    protected override void Update()
     {
+        base.Update();
         if (isGrab)
         {
             transform.position = hook.position;

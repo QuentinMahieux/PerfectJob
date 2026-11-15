@@ -20,11 +20,6 @@ public class VivariumManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        
-    }
-
     public Transform RandomWaypoint()
     {
         return waypoints[Random.Range(0, waypoints.Count)];

@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class WorkerCreator : MonoBehaviour
 {
@@ -11,7 +13,8 @@ public class WorkerCreator : MonoBehaviour
     public string[] names;
     public Vector2 energieTranche;
 
-    public Color[] skins;
+    public Sprite[] skins;
+    public Color[] skinColors;
     
     public Sprite[] hairs;
     public Color[] hairColors;
@@ -19,8 +22,15 @@ public class WorkerCreator : MonoBehaviour
     public Sprite[] eyes;
     public Color[] eyesColors;
     
-    public Sprite[] habits;
-    public Color[] habitColors;
+    public Sprite[] bodys;
+    public Color[] bodyColors;
+    
+    public Sprite[] legs;
+    public Color[] legColors;
+    
+    public Sprite[] foots;
+    public Color[] footColors;
+
     
     void Start()
     {
@@ -32,8 +42,9 @@ public class WorkerCreator : MonoBehaviour
     {
         string name = " ";
         int energy = 0;
-        
-        Color skin = new Color();
+
+        Sprite skin = null;
+        Color skinColor = new Color();
 
         Sprite hair = null;
         Color hairColor = new Color();
@@ -41,40 +52,56 @@ public class WorkerCreator : MonoBehaviour
         Sprite eye = null;
         Color eyeColor = new Color();
          
-        Sprite habit = null;
-        Color habitColor = new Color();
+        Sprite body = null;
+        Color bodyColor = new Color();
+        
+        Sprite leg = null;
+        Color legColor = new Color();
+        
+        Sprite foot = null;
+        Color footColor = new Color();
         
         
         for (int i = 0; i < numberWorker; i++)
         {
             name = names[Random.Range(0, names.Length)];
-            energy = Random.Range(100, 200);
+            energy = (int)Random.Range(energieTranche.x, energieTranche.y);
             
             skin = skins[Random.Range(0, skins.Length)];
+            skinColor = skinColors[Random.Range(0, skinColors.Length)];
             
             hair = hairs[Random.Range(0, hairs.Length)];
-            hairColor = hairColors[Random.Range(0, hairs.Length)];
+            hairColor = hairColors[Random.Range(0, hairColors.Length)];
             
             eye = eyes[Random.Range(0, eyes.Length)];
-            eyeColor = eyesColors[Random.Range(0, eyes.Length)];
+            eyeColor = eyesColors[Random.Range(0, eyesColors.Length)];
             
+            body = bodys[Random.Range(0, bodys.Length)];
+            bodyColor = bodyColors[Random.Range(0, bodyColors.Length)];
             
-            habit = habits[Random.Range(0, habits.Length)];
-            habitColor = habitColors[Random.Range(0, habitColors.Length)];
+            leg = legs[Random.Range(0, legs.Length)];
+            legColor = legColors[Random.Range(0, legColors.Length)];
             
-            CreateWorker(name, energy, hair, eye, habit, habitColor, skin, hairColor, eyeColor);
+            foot = foots[Random.Range(0, foots.Length)];
+            footColor = footColors[Random.Range(0, footColors.Length)];
+            
+            CreateWorker(name, energy,hair,eye,body,skin,leg,foot,bodyColor,skinColor,hairColor,eyeColor,legColor,footColor);
         }
     }
 
     //Génération du travailleur
-    void CreateWorker(string name, int energy, Sprite hair, Sprite eye, Sprite habit, Color habitColor, Color skin, Color hairColor, Color eyesColor)
+    void CreateWorker(string name, int energy, Sprite hair, Sprite eye, Sprite body, Sprite skin, Sprite leg, Sprite foot, Color bodyColor, Color skinColor, Color hairColor, Color eyesColor, Color legColor, Color footColor)
     {
         Worker newWorker = new Worker();
         
+        newWorker.id = Guid.NewGuid().ToString();
+        
         newWorker.name = name;
         newWorker.energy = energy;
+        newWorker.currentEnergy = energy;
         
         newWorker.skin = skin;
+        newWorker.skinColor = skinColor;
         
         newWorker.hair = hair;
         newWorker.hairColor = hairColor;
@@ -82,26 +109,35 @@ public class WorkerCreator : MonoBehaviour
         newWorker.eye = eye;
         newWorker.eyeColor = eyesColor;
         
-        newWorker.habit = habit;
-        newWorker.habitColor = habitColor;
-
-
+        newWorker.body = body;
+        newWorker.bodyColor = bodyColor;
+        
+        newWorker.leg = leg;
+        newWorker.legColor = legColor;
+        
+        newWorker.foot = foot;
+        newWorker.footColor = footColor;
+        
+        GameManager.instance.workers.Add(newWorker);
+        
         WorkerBehaviour workerElement = Instantiate(prefabWorker, spawnPoint.position, spawnPoint.rotation, transform.parent);
         workerElement.Instantiate(newWorker);
-        
     }
 }
 [System.Serializable]
 public class Worker
 {
     [Header("Attributes")] 
+    public string id;
     public string name;
 
     [Header("Statistique")]
     public int energy;
+    public int currentEnergy;
 
-    [Header("Physique")] 
-    public Color skin;
+    [Header("Physique")]
+    public Sprite skin;
+    public Color skinColor;
     
     public Sprite hair;
     public Color hairColor;
@@ -109,6 +145,12 @@ public class Worker
     public Sprite eye;
     public Color eyeColor;
 
-    public Sprite habit;
-    public Color habitColor;
+    public Sprite body;
+    public Color bodyColor;
+    
+    public Sprite leg;
+    public Color legColor;
+    
+    public Sprite foot;
+    public Color footColor;
 }

@@ -100,19 +100,40 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 4262798057585427494, guid: 061056c89decfd64f9d1e69fbeee1773, type: 3}
   m_PrefabInstance: {fileID: 1695369286091971699}
   m_PrefabAsset: {fileID: 0}
---- !u!212 &4064168425561111078 stripped
+--- !u!212 &4149775107398054564 stripped
 SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 3450314511082530389, guid: 061056c89decfd64f9d1e69fbeee1773, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3319679708926750423, guid: 061056c89decfd64f9d1e69fbeee1773, type: 3}
   m_PrefabInstance: {fileID: 1695369286091971699}
   m_PrefabAsset: {fileID: 0}
---- !u!212 &6370582225874975996 stripped
+--- !u!212 &5315732094018169130 stripped
 SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 5760090359987134607, guid: 061056c89decfd64f9d1e69fbeee1773, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6792113572811257177, guid: 061056c89decfd64f9d1e69fbeee1773, type: 3}
   m_PrefabInstance: {fileID: 1695369286091971699}
   m_PrefabAsset: {fileID: 0}
---- !u!212 &7064992990086312351 stripped
+--- !u!212 &5697638310452887667 stripped
 SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 8470370207232601580, guid: 061056c89decfd64f9d1e69fbeee1773, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6383072614145661952, guid: 061056c89decfd64f9d1e69fbeee1773, type: 3}
+  m_PrefabInstance: {fileID: 1695369286091971699}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &5774694230837182787 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5162528891609472304, guid: 061056c89decfd64f9d1e69fbeee1773, type: 3}
+  m_PrefabInstance: {fileID: 1695369286091971699}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6369292297631818069 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5756564575518948646, guid: 061056c89decfd64f9d1e69fbeee1773, type: 3}
+  m_PrefabInstance: {fileID: 1695369286091971699}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!212 &8383384504647817146 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 7192506612917111753, guid: 061056c89decfd64f9d1e69fbeee1773, type: 3}
   m_PrefabInstance: {fileID: 1695369286091971699}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &9143774628724762965 stripped
@@ -135,16 +156,29 @@ MonoBehaviour:
   worker:
     name: 
     energy: 0
-    skin: {r: 0, g: 0, b: 0, a: 0}
+    currentEnergy: 0
+    skin: {fileID: 0}
+    skinColor: {r: 0, g: 0, b: 0, a: 0}
     hair: {fileID: 0}
     hairColor: {r: 0, g: 0, b: 0, a: 0}
     eye: {fileID: 0}
     eyeColor: {r: 0, g: 0, b: 0, a: 0}
-    habit: {fileID: 0}
-    habitColor: {r: 0, g: 0, b: 0, a: 0}
-  skin: {fileID: 7064992990086312351}
-  hair: {fileID: 4064168425561111078}
-  eye: {fileID: 6370582225874975996}
-  habit: {fileID: 479309380193943230}
+    body: {fileID: 0}
+    bodyColor: {r: 0, g: 0, b: 0, a: 0}
+    leg: {fileID: 0}
+    legColor: {r: 0, g: 0, b: 0, a: 0}
+    foot: {fileID: 0}
+    footColor: {r: 0, g: 0, b: 0, a: 0}
+  skin: {fileID: 5697638310452887667}
+  hair: {fileID: 8383384504647817146}
+  eye: {fileID: 5315732094018169130}
+  body: {fileID: 479309380193943230}
+  leg: {fileID: 5774694230837182787}
+  foot: {fileID: 4149775107398054564}
+  emotionVisual: {fileID: 6369292297631818069}
+  happy: {fileID: 6266176060360064, guid: e023599cdb368694aa630b393d57e51e, type: 3}
+  medium: {fileID: -137972784495506535, guid: 3fb80b731be508b40b476aec2b74617d, type: 3}
+  sad: {fileID: -3752711834126370623, guid: 35c0539960590fc40bc2cdde46b05573, type: 3}
+  dead: {fileID: 3604192591476135790, guid: 80ff490af9a07df4d86e4b6a5f5a3e24, type: 3}
   rb: {fileID: 3219978478158108757}
   speed: 2.5
