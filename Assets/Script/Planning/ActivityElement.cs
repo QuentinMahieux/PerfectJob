@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ActivityElement : Grab
 {
+    private string id;
     [Header("Activity Element")]
     public ActivityDataInstance ActivityDataInstance;
     [Header("Attributes")]

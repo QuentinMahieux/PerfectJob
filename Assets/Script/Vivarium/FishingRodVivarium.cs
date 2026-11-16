@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class FishingRodVivarium : MonoBehaviour
@@ -30,13 +31,20 @@ public class FishingRodVivarium : MonoBehaviour
             newWorker.Instantiate(GameManager.instance.TakeCurrentWorker());
         }
 
-        if(GameManager.instance.pullVivarium == null) return;
+        if(GameManager.instance.pullVivarium.Count == 0) return;
+        
+        List<string> workerTodeletes = new List<string>();
         foreach (string worker in GameManager.instance.pullVivarium)
         {
             newWorker = Instantiate(prefabWorker, hook.position, hook.rotation, transform.parent);
             newWorker.Instantiate(GameManager.instance.FindWorker(worker));
             
-            GameManager.instance.pullVivarium.Remove(worker);
+            workerTodeletes.Add(worker);
+        }
+
+        for (int i = 0; i <= workerTodeletes.Count; i++)
+        {
+            GameManager.instance.pullVivarium.Remove(workerTodeletes[i]);
         }
     }
 
